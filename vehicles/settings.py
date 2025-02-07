@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 import os
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
+}
+
 import django_heroku
 from pathlib import Path
 
@@ -27,7 +33,7 @@ SECRET_KEY = 'django-insecure-@bg5l85@3wb7zpar7mx#xgpbm5qev0=t+l-ri!ld13b(_op#oh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://https-github-com-andywar65-djeocad.onrender.com"]
 
 
 # Application definition
@@ -142,3 +148,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"static")
 ]
+#django_heroku.settings(locals())
+
