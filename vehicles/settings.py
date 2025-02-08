@@ -17,7 +17,7 @@ DATABASES = {
     'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
 }
 
-import django_heroku
+#import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -145,8 +145,17 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"static")
-]
+#STATICFILES_DIRS = [
+ #   os.path.join(BASE_DIR,"static")
+#]
 #django_heroku.settings(locals())
+#export DJANGO_SETTINGS_MODULE='vehicles.settings'
+# This is for development
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Your static directory
+]
+
+# This is for production (do not include this in STATICFILES_DIRS)
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Where collected static files will go
+
 
