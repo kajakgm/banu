@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-@bg5l85@3wb7zpar7mx#xgpbm5qev0=t+l-ri!ld13b(_op#oh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://https-github-com-andywar65-djeocad.onrender.com"]
+ALLOWED_HOSTS = ["https://banucars.onrender.com"]
 
 
 # Application definition
