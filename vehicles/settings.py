@@ -5,10 +5,15 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Database configuration using dj_database_url
+# Set default DATABASE_URL environment variable (using SQLite as default)
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///db.sqlite3")
+
+# Database configuration
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv("DATABASE_URL", "sqlite:///db.sqlite3"))
+    'default': dj_database_url.config(default=DATABASE_URL)
 }
+
+
 
 # SECRET_KEY and Debug settings
 SECRET_KEY = 'django-insecure-@bg5l85@3wb7zpar7mx#xgpbm5qev0=t+l-ri!ld13b(_op#oh'
@@ -23,7 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'MyApp.apps.MyappConfig',
+    'MyApp.apps.MyappConfig'
+    
 ]
 
 # Middleware configuration
