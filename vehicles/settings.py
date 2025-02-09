@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-@bg5l85@3wb7zpar7mx#xgpbm5qev0=t+l-ri!ld13b(_op#oh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://banucars.onrender.com"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -157,5 +157,3 @@ STATICFILES_DIRS = [
 
 # This is for production (do not include this in STATICFILES_DIRS)
 STATIC_ROOT = BASE_DIR / "staticfiles"  # Where collected static files will go
-
-
