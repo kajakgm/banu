@@ -18,7 +18,7 @@ DATABASES = {
 # SECRET_KEY and Debug settings
 SECRET_KEY = 'django-insecure-@bg5l85@3wb7zpar7mx#xgpbm5qev0=t+l-ri!ld13b(_op#oh'
 DEBUG = True
-ALLOWED_HOSTS = ['https://banu-4qa7.onrender.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['banu-4qa7.onrender.com','localhost','127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
